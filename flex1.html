@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Cards Task</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            width: 350px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .card img {
+            width: 50%;
+            height: 350px;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            margin-top: 15px;
+            background-color: #1fae51;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #178b42;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Flexbox Cards Task</h2>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="Tanjiro.jpg" alt="Image 1">
+            <h3>Card 1</h3>
+            <p>This is a simple card using flex.</p>
+            <button class="btn">View</button>
+        </div>
+
+        <div class="card">
+            <img src="Zenitsu.jpg" alt="Image 2">
+            <h3>Card 2</h3>
+            <p>Practice creating layouts using Flexbox.</p>
+            <button class="btn">View</button>
+        </div>
+
+        <div class="card">
+            <img src="Inosuke.jpg" alt="Image 3">
+            <h3>Card 3</h3>
+            <p>Try adding more cards or changing the styles.</p>
+            <button class="btn">View</button>
+        </div>
+    </div>
+
+</body>
+</html>
