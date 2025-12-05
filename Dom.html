@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Task</title>
+</head>
+<body>
+
+    <p id="myPara" style="display: none;">
+        Hello! This paragraph is now visible after clicking the button.
+    </p>
+
+    <button onclick="showParagraph()">Click me</button>
+
+    <script>
+        function showParagraph() {
+            document.getElementById("myPara").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

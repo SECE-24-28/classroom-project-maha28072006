@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Generator</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .box {
+            border: 1px solid gray;
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Password Generator</h2>
+
+    <div class="box">
+        <p id="password">Generated Password</p>
+
+        <label>Password length:</label>
+        <input type="range" id="length" min="4" max="20" value="10"><br><br>
+
+        <label><input type="checkbox" id="lower" checked> Lowercase</label><br>
+        <label><input type="checkbox" id="upper" checked> Uppercase</label><br>
+        <label><input type="checkbox" id="number" checked> Numbers</label><br>
+        <label><input type="checkbox" id="symbol" checked> Symbols</label><br><br>
+
+        <button onclick="generatePassword()">Generate</button>
+    </div>
+
+<script>
+function generatePassword() {
+    let length = document.getElementById("length").value;
+
+    let lower = "abcdefghijklmnopqrstuvwxyz";
+    let upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let number = "0123456789";
+    let symbol = "!@#$%^&*";
+
+    let all = "";
+    if (document.getElementById("lower").checked) all += lower;
+    if (document.getElementById("upper").checked) all += upper;
+    if (document.getElementById("number").checked) all += number;
+    if (document.getElementById("symbol").checked) all += symbol;
+
+    let password = "";
+    for (let i = 0; i < length; i++) {
+        password += all[Math.floor(Math.random() * all.length)];
+    }
+
+    document.getElementById("password").innerText = password;
+}
+</script>
+
+</body>
+</html>
