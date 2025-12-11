@@ -1,0 +1,10 @@
+body {
+  background: black;
+  color: white;   /* ✅ so text is visible */
+}
+body {
+  background-color: #1e1e1e;
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}

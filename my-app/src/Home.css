@@ -1,0 +1,18 @@
+.home {
+  padding: 30px;
+}
+
+.highlight {
+  background-color: #6ef2cc;   /* ✅ Green highlight */
+  padding: 12px 20px;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.description {
+  margin-top: 30px;
+  font-size: 26px;
+  color: white;
+}
